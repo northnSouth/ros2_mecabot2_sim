@@ -1,0 +1,34 @@
+controller_manager:
+  ros__parameters:
+    update_rate: 100
+
+    JSB:
+      type: joint_state_broadcaster/JointStateBroadcaster
+    
+    velo_c:
+      type: velocity_controllers/JointGroupVelocityController
+
+JSB:
+  ros__parameters:
+    joints:
+      - y_front_omni_joint
+      - x_right_omni_joint
+      - x_left_omni_joint
+      - front_left_mecanum_joint
+      - front_right_mecanum_joint
+      - rear_left_mecanum_joint
+      - rear_right_mecanum_joint
+
+    interfaces:
+      - position
+
+velo_c:
+  ros__parameters:
+    joints:
+      - front_left_mecanum_joint
+      - front_right_mecanum_joint
+      - rear_left_mecanum_joint
+      - rear_right_mecanum_joint
+
+
+    

@@ -1,0 +1,72 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro">
+  
+    <!-- GAZEBO PLUGINS -->
+    <gazebo>
+
+        <plugin
+            name="gz_ros2_control::GazeboSimROS2ControlPlugin"
+            filename="libgz_ros2_control-system">
+            <parameters>$(find ros2_mecabot2_sim_base)/config/controller_config.yaml</parameters>  
+        </plugin>
+
+    </gazebo>
+
+    <!-- ROS2 Control -->
+    <ros2_control name="GazeboSimSystem" type="system">
+        
+        <hardware>
+            <plugin>gz_ros2_control/GazeboSimSystem</plugin>
+            </hardware>
+        
+        <joint name="y_front_omni_joint">
+            <state_interface name="position"/>
+            </joint>
+        
+        <joint name="x_right_omni_joint">
+            <state_interface name="position"/>
+            </joint>
+        
+        <joint name="x_left_omni_joint">
+            <state_interface name="position"/>
+            </joint>
+
+        <joint name="front_left_mecanum_joint">
+            <command_interface name="velocity">
+                <param name="min">-100</param>
+                <param name="max">100</param>
+            </command_interface>
+            <state_interface name="position"/>
+            <state_interface name="velocity"/>
+            </joint>
+
+        <joint name="front_right_mecanum_joint">
+            <command_interface name="velocity">
+                <param name="min">-100</param>
+                <param name="max">100</param>
+            </command_interface>
+            <state_interface name="position"/>
+            <state_interface name="velocity"/>
+            </joint>
+
+        <joint name="rear_left_mecanum_joint">
+            <command_interface name="velocity">
+                <param name="min">-100</param>
+                <param name="max">100</param>
+            </command_interface>
+            <state_interface name="position"/>
+            <state_interface name="velocity"/>
+            </joint>
+
+        <joint name="rear_right_mecanum_joint">
+            <command_interface name="velocity">
+                <param name="min">-100</param>
+                <param name="max">100</param>
+            </command_interface>
+            <state_interface name="position"/>
+            <state_interface name="velocity"/>
+            </joint>
+    
+    </ros2_control>
+    
+</robot>
