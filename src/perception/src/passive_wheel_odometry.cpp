@@ -5,16 +5,13 @@
  */
 
 #include "ros2_mecabot2_sim_perception/passive_wheel_odometry.hpp"
-#include "sensor_msgs/msg/joint_state.hpp"
 
-#include <rclcpp/logging.hpp>
-#include <rclcpp/parameter_value.hpp>
-#include <string>
 #include <tf2/LinearMath/Quaternion.h>
 #include <geometry_msgs/msg/transform_stamped.hpp>
 
 #include <functional>
 #include <vector>
+#include <string>
 
 namespace {
     constexpr const char* NODE_NAME = "mecabot2_passive_wheel_odometry";
