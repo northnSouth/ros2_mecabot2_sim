@@ -9,8 +9,6 @@
 
   <buildtool_depend>ament_cmake</buildtool_depend>
 
-  <!-- TODO: Test the dependencies in a container, make sure they cover all needs -->
-
   <depend>rclcpp</depend>
   <depend>std_msgs</depend>
   <depend>geometry_msgs</depend>

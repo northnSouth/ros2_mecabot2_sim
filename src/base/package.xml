@@ -9,8 +9,6 @@
 
   <buildtool_depend>ament_cmake</buildtool_depend>
 
-  <!-- TODO: Test the dependencies in a container, make sure they cover all needs -->
-
   <exec_depend>xacro</exec_depend>
   <exec_depend>ros_gz_sim</exec_depend>
   <exec_depend>ros_gz_bridge</exec_depend>
@@ -19,6 +17,7 @@
   <exec_depend>rviz2</exec_depend>
   <exec_depend>robot_state_publisher</exec_depend>
   <exec_depend>ros2_control</exec_depend>
+  <exec_depend>ros2_controllers</exec_depend>
 
   <export>
     <build_type>ament_cmake</build_type>
